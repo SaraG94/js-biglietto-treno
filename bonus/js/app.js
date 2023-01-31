@@ -22,3 +22,22 @@ if (age < 18 ){
     let over65Price = ((kilometri*0.21)*0.6);
     console.log(over65Price)
 } 
+
+//prendere elementi html 
+const strongElement=document.getElementById('kw');
+//stampare dati viaggiatore
+strongElement.innerHTML= kilometri;
+
+//prendere elementi html 
+let pElement=document.getElementById('passenger');
+//stampare dati viaggiatore
+pElement.innerHTML= firstname + ' ' + age;
+
+//prendere elemento html
+let spanElement=document.getElementById('full-price');
+//stampare prezzo intero
+spanElement.innerHTML=fullPrice;
+
+let divElement=document.getElementById('discount-price');
+//stampare prezzo intero
+divElement.innerHTML= under18Price + 'importo scontato da pagare';
