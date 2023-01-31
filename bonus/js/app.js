@@ -1,3 +1,6 @@
+
+
+
 //chiedere kw
 let kilometri = prompt ('Salve viaggiatore! Quanti kilometri deve percorre col treno?');
 console.log(kilometri)
@@ -14,12 +17,17 @@ console.log(firstname)
 let fullPrice = (kilometri*0.21);
 console.log(fullPrice)
 
-//applicare sconti
+//prendere elemento 
+let divElement=document.getElementById('discount-price');
+
+//applicare sconti e stamparli
 if (age < 18 ){
     let under18Price = ((kilometri*0.21)*0.8);
+    divElement.innerHTML= under18Price +' '+'importo da pagare scontato del 20%';
     console.log(under18Price)
 } else if(age > 65 || age==='65'){
     let over65Price = ((kilometri*0.21)*0.6);
+    divElement.innerHTML= over65Price +' '+'importo da pagare scontato del 40%';
     console.log(over65Price)
 } 
 
@@ -38,6 +46,3 @@ let spanElement=document.getElementById('full-price');
 //stampare prezzo intero
 spanElement.innerHTML=fullPrice;
 
-let divElement=document.getElementById('discount-price');
-//stampare prezzo intero
-divElement.innerHTML= under18Price + 'importo scontato da pagare';

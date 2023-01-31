@@ -26,3 +26,8 @@
     line-height: 30px;
     color: white;
 }
+
+h2#discount-price{
+    text-decoration: underline;
+    font-size: xx-large;
+}
