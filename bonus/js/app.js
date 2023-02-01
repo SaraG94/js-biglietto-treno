@@ -1,6 +1,4 @@
 
-
-
 //chiedere kw
 let kilometri = prompt ('Salve viaggiatore! Quanti kilometri deve percorre col treno?');
 console.log(kilometri)
@@ -14,35 +12,27 @@ let firstname = prompt ('Qual è il nome e il cognome del viaggiatore?');
 console.log(firstname)
 
 //calcolare prezzo kw
-let fullPrice = (kilometri*0.21);
+let fullPrice = (kilometri*0.21).toFixed(2);
 console.log(fullPrice)
-
-//prendere elemento 
-let divElement=document.getElementById('discount-price');
 
 //applicare sconti e stamparli
 if (age < 18 ){
-    let under18Price = ((kilometri*0.21)*0.8);
-    divElement.innerHTML= under18Price +' '+'importo da pagare scontato del 20%';
+    let under18Price = ((kilometri*0.21)*0.8).toFixed(2);
+    document.getElementById('discount-price').innerHTML= under18Price +' '+'importo da pagare scontato del 20%';
     console.log(under18Price)
 } else if(age > 65 || age==='65'){
-    let over65Price = ((kilometri*0.21)*0.6);
-    divElement.innerHTML= over65Price +' '+'importo da pagare scontato del 40%';
+    let over65Price = ((kilometri*0.21)*0.6).toFixed(2);
+    document.getElementById('discount-price').innerHTML= over65Price +' '+'importo da pagare scontato del 40%';
     console.log(over65Price)
 } 
 
-//prendere elementi html 
-const strongElement=document.getElementById('kw');
-//stampare dati viaggiatore
-strongElement.innerHTML= kilometri;
+//prendere elementi html e stampare dati viaggiatore
+document.getElementById('kw').innerHTML= kilometri;
 
-//prendere elementi html 
-let pElement=document.getElementById('passenger');
-//stampare dati viaggiatore
-pElement.innerHTML= firstname + ' ' + age;
+//prendere elementi html e stampare dati viaggiatore
+document.getElementById('passenger').innerHTML= firstname + ' ' + age;
 
-//prendere elemento html
-let spanElement=document.getElementById('full-price');
-//stampare prezzo intero
-spanElement.innerHTML=fullPrice;
+//prendere elemento html estampare prezzo intero
+document.getElementById('full-price').innerHTML=fullPrice;
+
 
